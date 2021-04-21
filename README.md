@@ -1,11 +1,10 @@
 # Astronomy_project2021
-NKU&amp;NAO project
 
-这个项目由4位来自NKU的学生负责。
-项目的主要目的是利用机器学习的方法探测来自FAST的巡天数据中是否含有中性氢信号。
+## 3D-DataCube
 
-在这里我们将分享学习进度、学习资源，以及最新的代码成果。
-
-感谢支持。
+### contains:
+* codes(.py)
+* files(.fits)
+* img
 
 
