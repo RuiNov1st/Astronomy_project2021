@@ -1,0 +1,1615 @@
+12059:0
+
+
+7334:1
+77 
+Dec+2715_arcdrift-M01_W_0137.fits :727
+Dec+2715_arcdrift-M05_W_0137.fits :727
+
+
+14964:2
+266 
+Dec+2715_arcdrift-M01_W_0148.fits :11
+Dec+2715_arcdrift-M15_W_0148.fits :11
+
+
+13026:3
+184 
+Dec+2715_arcdrift-M01_W_0165.fits :1326
+Dec+2715_arcdrift-M09_W_0165.fits :1326
+
+
+10074:4
+26 
+320 
+Dec+2715_arcdrift-M01_W_0186.fits :318
+Dec+2715_arcdrift-M02_W_0186.fits :318
+Dec+2715_arcdrift-M15_W_0186.fits :318
+
+
+10207:5
+94 
+150 
+Dec+2715_arcdrift-M01_W_0187.fits :236
+Dec+2715_arcdrift-M05_W_0187.fits :236
+Dec+2715_arcdrift-M09_W_0187.fits :236
+
+
+7830:6
+
+
+7983:7
+78 
+145 
+Dec+2715_arcdrift-M01_W_0140.fits :0
+Dec+2715_arcdrift-M05_W_0140.fits :0
+Dec+2715_arcdrift-M09_W_0139.fits :1964
+
+
+6768:8
+
+
+14157:9
+182 
+Dec+2715_arcdrift-M01_W_0153.fits :561
+Dec+2715_arcdrift-M09_W_0153.fits :561
+
+
+11377:10
+101 
+Dec+2715_arcdrift-M01_W_0164.fits :1354
+Dec+2715_arcdrift-M05_W_0164.fits :1354
+
+
+11329:11
+
+
+10758:12
+103 
+186 
+Dec+2715_arcdrift-M01_W_0168.fits :890
+Dec+2715_arcdrift-M05_W_0168.fits :890
+Dec+2715_arcdrift-M09_W_0168.fits :890
+
+
+9142:13
+
+
+9645:14
+195 
+Dec+2715_arcdrift-M01_W_0193.fits :59
+Dec+2715_arcdrift-M09_W_0193.fits :59
+
+
+7279:15
+
+
+8543:16
+100 
+Dec+2715_arcdrift-M02_W_0124.fits :1719
+Dec+2715_arcdrift-M06_W_0124.fits :1719
+
+
+10407:17
+265 
+Dec+2715_arcdrift-M02_W_0130.fits :409
+Dec+2715_arcdrift-M15_W_0130.fits :409
+
+
+11715:18
+215 
+Dec+2715_arcdrift-M02_W_0136.fits :96
+Dec+2715_arcdrift-M10_W_0159.fits :1498
+
+
+11631:19
+105 
+Dec+2715_arcdrift-M02_W_0154.fits :306
+Dec+2715_arcdrift-M06_W_0154.fits :306
+
+
+14853:20
+
+
+10549:21
+318 
+Dec+2715_arcdrift-M02_W_0159.fits :328
+Dec+2715_arcdrift-M15_W_0159.fits :328
+
+
+11768:22
+163 
+Dec+2715_arcdrift-M02_W_0167.fits :1769
+Dec+2715_arcdrift-M08_W_0167.fits :1769
+
+
+8466:23
+
+
+9201:24
+274 
+Dec+2715_arcdrift-M02_W_0175.fits :209
+Dec+2715_arcdrift-M15_W_0175.fits :209
+
+
+7599:25
+130 
+Dec+2715_arcdrift-M02_W_0185.fits :1357
+Dec+2715_arcdrift-M06_W_0185.fits :1357
+
+
+10074:26
+320 
+Dec+2715_arcdrift-M02_W_0186.fits :318
+Dec+2715_arcdrift-M15_W_0186.fits :318
+
+
+9941:27
+114 
+Dec+2715_arcdrift-M02_W_0193.fits :1001
+Dec+2715_arcdrift-M06_W_0193.fits :1001
+
+
+11000:28
+
+
+9026:29
+102 
+156 
+Dec+2715_arcdrift-M02_W_0128.fits :795
+Dec+2715_arcdrift-M06_W_0128.fits :795
+Dec+2715_arcdrift-M08_W_0128.fits :795
+
+
+7687:30
+125 
+Dec+2715_arcdrift-M02_W_0151.fits :1034
+Dec+2715_arcdrift-M06_W_0151.fits :1034
+
+
+9742:31
+107 
+134 
+Dec+2715_arcdrift-M02_W_0156.fits :827
+Dec+2715_arcdrift-M06_W_0156.fits :827
+Dec+2715_arcdrift-M08_W_0156.fits :827
+
+
+13030:32
+108 
+Dec+2715_arcdrift-M02_W_0165.fits :1062
+Dec+2715_arcdrift-M06_W_0165.fits :1062
+
+
+11012:33
+319 
+Dec+2715_arcdrift-M02_W_0169.fits :0
+Dec+2715_arcdrift-M15_W_0169.fits :0
+
+
+10546:34
+
+
+13156:35
+275 
+Dec+2715_arcdrift-M02_W_0182.fits :1051
+Dec+2715_arcdrift-M15_W_0182.fits :1051
+
+
+13169:36
+164 
+Dec+2715_arcdrift-M02_W_0183.fits :169
+Dec+2715_arcdrift-M08_W_0183.fits :169
+
+
+10876:37
+72 
+Dec+2715_arcdrift-M03_W_0122.fits :1905
+Dec+2715_arcdrift-M05_W_0123.fits :0
+
+
+14172:38
+
+
+6762:39
+87 
+258 
+Dec+2715_arcdrift-M03_W_0160.fits :1247
+Dec+2715_arcdrift-M05_W_0160.fits :1247
+Dec+2715_arcdrift-M12_W_0158.fits :0
+
+
+9283:40
+99 
+Dec+2715_arcdrift-M03_W_0163.fits :1512
+Dec+2715_arcdrift-M05_W_0163.fits :1512
+
+
+9342:41
+88 
+Dec+2715_arcdrift-M03_W_0170.fits :328
+Dec+2715_arcdrift-M05_W_0170.fits :328
+
+
+10295:42
+303 
+Dec+2715_arcdrift-M03_W_0174.fits :416
+Dec+2715_arcdrift-M14_W_0174.fits :416
+
+
+9299:43
+106 
+149 
+Dec+2715_arcdrift-M03_W_0181.fits :1207
+Dec+2715_arcdrift-M05_W_0181.fits :1207
+Dec+2715_arcdrift-M09_W_0181.fits :1207
+
+
+9986:44
+
+
+10196:45
+111 
+Dec+2715_arcdrift-M03_W_0196.fits :1112
+Dec+2715_arcdrift-M05_W_0196.fits :1112
+
+
+11094:46
+112 
+Dec+2715_arcdrift-M03_W_0197.fits :902
+Dec+2715_arcdrift-M05_W_0197.fits :902
+
+
+10993:47
+97 
+144 
+356 
+Dec+2715_arcdrift-M03_W_0125.fits :36
+Dec+2715_arcdrift-M05_W_0125.fits :36
+Dec+2715_arcdrift-M09_W_0125.fits :36
+Dec+2715_arcdrift-M18_W_0174.fits :1533
+
+
+14842:48
+243 
+Dec+2715_arcdrift-M03_W_0139.fits :967
+Dec+2715_arcdrift-M14_W_0139.fits :967
+
+
+14911:49
+60 
+245 
+Dec+2715_arcdrift-M03_W_0142.fits :370
+Dec+2715_arcdrift-M04_W_0142.fits :370
+Dec+2715_arcdrift-M14_W_0142.fits :370
+
+
+12033:50
+80 
+Dec+2715_arcdrift-M03_W_0145.fits :322
+Dec+2715_arcdrift-M05_W_0145.fits :322
+
+
+9864:51
+
+
+6797:52
+98 
+248 
+Dec+2715_arcdrift-M03_W_0157.fits :583
+Dec+2715_arcdrift-M05_W_0157.fits :583
+Dec+2715_arcdrift-M14_W_0157.fits :583
+
+
+10932:53
+84 
+Dec+2715_arcdrift-M03_W_0168.fits :640
+Dec+2715_arcdrift-M04_W_0168.fits :640
+
+
+15224:54
+90 
+Dec+2715_arcdrift-M03_W_0176.fits :473
+Dec+2715_arcdrift-M05_W_0176.fits :473
+
+
+7892:55
+
+
+10174:56
+95 
+242 
+Dec+2715_arcdrift-M03_W_0189.fits :318
+Dec+2715_arcdrift-M05_W_0189.fits :318
+Dec+2715_arcdrift-M14_W_0189.fits :318
+
+
+11763:57
+
+
+10012:58
+96 
+246 
+Dec+2715_arcdrift-M03_W_0194.fits :1119
+Dec+2715_arcdrift-M05_W_0194.fits :1119
+Dec+2715_arcdrift-M14_W_0194.fits :1119
+
+
+9158:59
+166 
+Dec+2715_arcdrift-M04_W_0127.fits :1257
+Dec+2715_arcdrift-M10_W_0127.fits :1257
+
+
+14911:60
+245 
+Dec+2715_arcdrift-M04_W_0142.fits :370
+Dec+2715_arcdrift-M14_W_0142.fits :370
+
+
+10299:61
+
+
+14241:62
+168 
+Dec+2715_arcdrift-M04_W_0152.fits :1217
+Dec+2715_arcdrift-M10_W_0152.fits :1217
+
+
+11922:63
+280 
+Dec+2715_arcdrift-M04_W_0153.fits :673
+Dec+2715_arcdrift-M13_W_0153.fits :673
+
+
+12222:64
+218 
+251 
+Dec+2715_arcdrift-M04_W_0167.fits :717
+Dec+2715_arcdrift-M10_W_0167.fits :717
+Dec+2715_arcdrift-M14_W_0167.fits :717
+
+
+11838:65
+220 
+302 
+Dec+2715_arcdrift-M04_W_0172.fits :0
+Dec+2715_arcdrift-M10_W_0171.fits :1988
+Dec+2715_arcdrift-M14_W_0172.fits :0
+
+
+9363:66
+173 
+Dec+2715_arcdrift-M04_W_0174.fits :1464
+Dec+2715_arcdrift-M10_W_0174.fits :1464
+
+
+13057:67
+175 
+Dec+2715_arcdrift-M04_W_0183.fits :830
+Dec+2715_arcdrift-M10_W_0183.fits :830
+
+
+9251:68
+204 
+Dec+2715_arcdrift-M04_W_0125.fits :1472
+Dec+2715_arcdrift-M10_W_0125.fits :1472
+
+
+11142:69
+
+
+9876:70
+
+
+11912:71
+276 
+Dec+2715_arcdrift-M04_W_0136.fits :227
+Dec+2715_arcdrift-M13_W_0136.fits :227
+
+
+10876:72
+
+
+7752:73
+296 
+Dec+2715_arcdrift-M04_W_0137.fits :1766
+Dec+2715_arcdrift-M14_W_0138.fits :0
+
+
+12348:74
+180 
+Dec+2715_arcdrift-M05_W_0133.fits :0
+Dec+2715_arcdrift-M09_W_0132.fits :1922
+
+
+9858:75
+209 
+277 
+Dec+2715_arcdrift-M04_W_0141.fits :989
+Dec+2715_arcdrift-M10_W_0141.fits :989
+Dec+2715_arcdrift-M13_W_0141.fits :989
+
+
+15117:76
+
+
+7334:77
+
+
+7983:78
+145 
+Dec+2715_arcdrift-M05_W_0140.fits :0
+Dec+2715_arcdrift-M09_W_0139.fits :1964
+
+
+11671:79
+230 
+Dec+2715_arcdrift-M04_W_0157.fits :0
+Dec+2715_arcdrift-M13_W_0157.fits :0
+
+
+12033:80
+
+
+6789:81
+
+
+11765:82
+170 
+249 
+Dec+2715_arcdrift-M04_W_0160.fits :649
+Dec+2715_arcdrift-M10_W_0160.fits :649
+Dec+2715_arcdrift-M14_W_0160.fits :649
+
+
+13019:83
+109 
+Dec+2715_arcdrift-M05_W_0149.fits :853
+Dec+2715_arcdrift-M06_W_0166.fits :0
+
+
+10932:84
+
+
+10888:85
+
+
+13584:86
+
+
+6762:87
+258 
+Dec+2715_arcdrift-M05_W_0160.fits :1247
+Dec+2715_arcdrift-M12_W_0158.fits :0
+
+
+9342:88
+
+
+11684:89
+176 
+Dec+2715_arcdrift-M04_W_0189.fits :323
+Dec+2715_arcdrift-M10_W_0189.fits :323
+
+
+15224:90
+
+
+10070:91
+
+
+7682:92
+
+
+9790:93
+224 
+Dec+2715_arcdrift-M04_W_0198.fits :440
+Dec+2715_arcdrift-M10_W_0198.fits :440
+
+
+10207:94
+150 
+Dec+2715_arcdrift-M05_W_0187.fits :236
+Dec+2715_arcdrift-M09_W_0187.fits :236
+
+
+10174:95
+242 
+Dec+2715_arcdrift-M05_W_0189.fits :318
+Dec+2715_arcdrift-M14_W_0189.fits :318
+
+
+10012:96
+246 
+Dec+2715_arcdrift-M05_W_0194.fits :1119
+Dec+2715_arcdrift-M14_W_0194.fits :1119
+
+
+10993:97
+144 
+356 
+Dec+2715_arcdrift-M05_W_0125.fits :36
+Dec+2715_arcdrift-M09_W_0125.fits :36
+Dec+2715_arcdrift-M18_W_0174.fits :1533
+
+
+6797:98
+248 
+Dec+2715_arcdrift-M05_W_0157.fits :583
+Dec+2715_arcdrift-M14_W_0157.fits :583
+
+
+9283:99
+
+
+8543:100
+
+
+11377:101
+
+
+9026:102
+156 
+Dec+2715_arcdrift-M06_W_0128.fits :795
+Dec+2715_arcdrift-M08_W_0128.fits :795
+
+
+10758:103
+186 
+Dec+2715_arcdrift-M05_W_0168.fits :890
+Dec+2715_arcdrift-M09_W_0168.fits :890
+
+
+6769:104
+159 
+Dec+2715_arcdrift-M06_W_0145.fits :318
+Dec+2715_arcdrift-M08_W_0145.fits :318
+
+
+11631:105
+
+
+9299:106
+149 
+Dec+2715_arcdrift-M05_W_0181.fits :1207
+Dec+2715_arcdrift-M09_W_0181.fits :1207
+
+
+9742:107
+134 
+Dec+2715_arcdrift-M06_W_0156.fits :827
+Dec+2715_arcdrift-M08_W_0156.fits :827
+
+
+13030:108
+
+
+13019:109
+
+
+9606:110
+193 
+Dec+2715_arcdrift-M05_W_0192.fits :0
+Dec+2715_arcdrift-M09_W_0192.fits :0
+
+
+10196:111
+
+
+11094:112
+
+
+13136:113
+
+
+9941:114
+
+
+11080:115
+117 
+Dec+2715_arcdrift-M07_W_0126.fits :3
+Dec+2715_arcdrift-M06_W_0126.fits :3
+
+
+7882:116
+124 
+133 
+Dec+2715_arcdrift-M07_W_0150.fits :393
+Dec+2715_arcdrift-M06_W_0150.fits :393
+Dec+2715_arcdrift-M08_W_0150.fits :393
+
+
+11080:117
+
+
+9957:118
+331 
+Dec+2715_arcdrift-M07_W_0154.fits :124
+Dec+2715_arcdrift-M16_W_0154.fits :124
+
+
+12189:119
+132 
+Dec+2715_arcdrift-M06_W_0130.fits :1782
+Dec+2715_arcdrift-M08_W_0130.fits :1782
+
+
+8511:120
+
+
+7817:121
+138 
+158 
+Dec+2715_arcdrift-M06_W_0141.fits :1827
+Dec+2715_arcdrift-M07_W_0141.fits :1827
+Dec+2715_arcdrift-M08_W_0141.fits :1827
+
+
+9330:122
+370 
+Dec+2715_arcdrift-M07_W_0180.fits :861
+Dec+2715_arcdrift-M19_W_0180.fits :727
+
+
+11951:123
+
+
+7882:124
+133 
+Dec+2715_arcdrift-M06_W_0150.fits :393
+Dec+2715_arcdrift-M08_W_0150.fits :393
+
+
+7687:125
+
+
+6890:126
+141 
+160 
+Dec+2715_arcdrift-M06_W_0157.fits :219
+Dec+2715_arcdrift-M07_W_0157.fits :219
+Dec+2715_arcdrift-M08_W_0157.fits :219
+
+
+13662:127
+
+
+10837:128
+161 
+Dec+2715_arcdrift-M06_W_0163.fits :0
+Dec+2715_arcdrift-M08_W_0162.fits :2003
+
+
+8811:129
+135 
+140 
+Dec+2715_arcdrift-M06_W_0174.fits :1550
+Dec+2715_arcdrift-M08_W_0174.fits :1550
+Dec+2715_arcdrift-M07_W_0174.fits :1550
+
+
+7599:130
+
+
+10260:131
+
+
+12189:132
+
+
+7882:133
+
+
+9742:134
+
+
+8811:135
+140 
+Dec+2715_arcdrift-M08_W_0174.fits :1550
+Dec+2715_arcdrift-M07_W_0174.fits :1550
+
+
+10941:136
+152 
+Dec+2715_arcdrift-M07_W_0124.fits :264
+Dec+2715_arcdrift-M08_W_0124.fits :264
+
+
+10947:137
+153 
+Dec+2715_arcdrift-M07_W_0125.fits :1368
+Dec+2715_arcdrift-M08_W_0125.fits :1368
+
+
+7817:138
+158 
+Dec+2715_arcdrift-M07_W_0141.fits :1827
+Dec+2715_arcdrift-M08_W_0141.fits :1827
+
+
+9991:139
+
+
+8811:140
+
+
+6890:141
+160 
+Dec+2715_arcdrift-M07_W_0157.fits :219
+Dec+2715_arcdrift-M08_W_0157.fits :219
+
+
+6604:142
+
+
+10675:143
+333 
+Dec+2715_arcdrift-M07_W_0164.fits :1722
+Dec+2715_arcdrift-M16_W_0165.fits :0
+
+
+10993:144
+356 
+Dec+2715_arcdrift-M09_W_0125.fits :36
+Dec+2715_arcdrift-M18_W_0174.fits :1533
+
+
+7983:145
+
+
+10002:146
+
+
+6997:147
+269 
+Dec+2715_arcdrift-M09_W_0163.fits :872
+Dec+2715_arcdrift-M15_W_0163.fits :872
+
+
+9440:148
+
+
+9299:149
+
+
+10207:150
+
+
+7615:151
+
+
+10941:152
+
+
+10947:153
+
+
+12594:154
+328 
+Dec+2715_arcdrift-M08_W_0126.fits :1237
+Dec+2715_arcdrift-M16_W_0126.fits :1237
+
+
+8885:155
+
+
+9026:156
+
+
+9700:157
+
+
+7817:158
+
+
+6769:159
+
+
+6890:160
+
+
+10837:161
+
+
+9965:162
+
+
+11768:163
+
+
+13169:164
+
+
+7896:165
+
+
+9158:166
+
+
+7901:167
+244 
+Dec+2715_arcdrift-M10_W_0139.fits :1843
+Dec+2715_arcdrift-M14_W_0140.fits :0
+
+
+14241:168
+
+
+9886:169
+191 
+Dec+2715_arcdrift-M10_W_0155.fits :1331
+Dec+2715_arcdrift-M11_W_0155.fits :1331
+
+
+11765:170
+249 
+Dec+2715_arcdrift-M10_W_0160.fits :649
+Dec+2715_arcdrift-M14_W_0160.fits :649
+
+
+5782:171
+237 
+Dec+2715_arcdrift-M10_W_0162.fits :160
+Dec+2715_arcdrift-M11_W_0162.fits :160
+
+
+11551:172
+250 
+Dec+2715_arcdrift-M10_W_0163.fits :1648
+Dec+2715_arcdrift-M14_W_0163.fits :1648
+
+
+9363:173
+
+
+9850:174
+241 
+Dec+2715_arcdrift-M10_W_0176.fits :362
+Dec+2715_arcdrift-M14_W_0176.fits :362
+
+
+13057:175
+
+
+11684:176
+
+
+11779:177
+
+
+7564:178
+
+
+12848:179
+264 
+Dec+2715_arcdrift-M09_W_0124.fits :528
+Dec+2715_arcdrift-M15_W_0124.fits :528
+
+
+12348:180
+
+
+14751:181
+
+
+14157:182
+
+
+10962:183
+226 
+Dec+2715_arcdrift-M11_W_0125.fits :1370
+Dec+2715_arcdrift-M13_W_0125.fits :1370
+
+
+13026:184
+
+
+11197:185
+
+
+10758:186
+
+
+8519:187
+
+
+11637:188
+214 
+272 
+Dec+2715_arcdrift-M09_W_0173.fits :88
+Dec+2715_arcdrift-M10_W_0154.fits :0
+Dec+2715_arcdrift-M15_W_0173.fits :88
+
+
+10189:189
+
+
+15013:190
+278 
+Dec+2715_arcdrift-M11_W_0143.fits :133
+Dec+2715_arcdrift-M13_W_0143.fits :133
+
+
+9886:191
+
+
+9715:192
+
+
+9606:193
+
+
+11707:194
+281 
+Dec+2715_arcdrift-M11_W_0159.fits :840
+Dec+2715_arcdrift-M13_W_0159.fits :840
+
+
+9645:195
+
+
+5903:196
+217 
+Dec+2715_arcdrift-M11_W_0165.fits :853
+Dec+2715_arcdrift-M10_W_0165.fits :853
+
+
+11174:197
+
+
+9543:198
+
+
+11124:199
+
+
+12497:200
+
+
+10128:201
+287 
+Dec+2715_arcdrift-M11_W_0193.fits :1854
+Dec+2715_arcdrift-M13_W_0194.fits :0
+
+
+10079:202
+231 
+236 
+Dec+2715_arcdrift-M11_W_0196.fits :380
+Dec+2715_arcdrift-M13_W_0196.fits :380
+Dec+2715_arcdrift-M11_W_0158.fits :1446
+
+
+10984:203
+225 
+Dec+2715_arcdrift-M10_W_0123.fits :710
+Dec+2715_arcdrift-M13_W_0123.fits :710
+
+
+9251:204
+
+
+10961:205
+
+
+12392:206
+227 
+Dec+2715_arcdrift-M10_W_0132.fits :267
+Dec+2715_arcdrift-M13_W_0132.fits :267
+
+
+7426:207
+
+
+11465:208
+
+
+9858:209
+277 
+Dec+2715_arcdrift-M10_W_0141.fits :989
+Dec+2715_arcdrift-M13_W_0141.fits :989
+
+
+5972:210
+
+
+6793:211
+228 
+235 
+Dec+2715_arcdrift-M10_W_0147.fits :1755
+Dec+2715_arcdrift-M13_W_0148.fits :0
+Dec+2715_arcdrift-M11_W_0147.fits :1755
+
+
+13348:212
+
+
+11458:213
+
+
+11637:214
+272 
+Dec+2715_arcdrift-M10_W_0154.fits :0
+Dec+2715_arcdrift-M15_W_0173.fits :88
+
+
+11715:215
+
+
+14616:216
+
+
+5903:217
+
+
+12222:218
+251 
+Dec+2715_arcdrift-M10_W_0167.fits :717
+Dec+2715_arcdrift-M14_W_0167.fits :717
+
+
+11352:219
+
+
+11838:220
+302 
+Dec+2715_arcdrift-M10_W_0171.fits :1988
+Dec+2715_arcdrift-M14_W_0172.fits :0
+
+
+10218:221
+
+
+14444:222
+
+
+7641:223
+
+
+9790:224
+
+
+10984:225
+
+
+10962:226
+
+
+12392:227
+
+
+6793:228
+235 
+Dec+2715_arcdrift-M13_W_0148.fits :0
+Dec+2715_arcdrift-M11_W_0147.fits :1755
+
+
+10894:229
+
+
+11671:230
+
+
+10079:231
+236 
+Dec+2715_arcdrift-M13_W_0196.fits :380
+Dec+2715_arcdrift-M11_W_0158.fits :1446
+
+
+11489:232
+
+
+9007:233
+256 
+Dec+2715_arcdrift-M11_W_0136.fits :14
+Dec+2715_arcdrift-M12_W_0136.fits :14
+
+
+8918:234
+279 
+Dec+2715_arcdrift-M11_W_0146.fits :1310
+Dec+2715_arcdrift-M13_W_0146.fits :1310
+
+
+6793:235
+
+
+10079:236
+
+
+5782:237
+
+
+9602:238
+
+
+10170:239
+286 
+Dec+2715_arcdrift-M11_W_0187.fits :345
+Dec+2715_arcdrift-M13_W_0187.fits :345
+
+
+10120:240
+262 
+Dec+2715_arcdrift-M11_W_0197.fits :192
+Dec+2715_arcdrift-M12_W_0197.fits :192
+
+
+9850:241
+
+
+10174:242
+
+
+14842:243
+
+
+7901:244
+
+
+14911:245
+
+
+10012:246
+
+
+9189:247
+
+
+6797:248
+
+
+11765:249
+
+
+11551:250
+
+
+12222:251
+
+
+12422:252
+
+
+12207:253
+
+
+11099:254
+271 
+Dec+2715_arcdrift-M12_W_0132.fits :740
+Dec+2715_arcdrift-M15_W_0168.fits :1410
+
+
+10858:255
+
+
+9007:256
+
+
+9273:257
+
+
+6762:258
+
+
+9739:259
+
+
+10337:260
+
+
+14559:261
+
+
+10120:262
+
+
+10937:263
+
+
+12848:264
+
+
+10407:265
+
+
+14964:266
+
+
+9996:267
+
+
+11974:268
+
+
+6997:269
+
+
+11011:270
+
+
+11099:271
+
+
+11637:272
+
+
+9413:273
+
+
+9201:274
+
+
+13156:275
+
+
+11912:276
+
+
+9858:277
+
+
+15013:278
+
+
+8918:279
+
+
+11922:280
+
+
+11707:281
+
+
+8767:282
+
+
+11814:283
+
+
+11694:284
+
+
+13291:285
+
+
+10170:286
+
+
+10128:287
+
+
+10712:288
+338 
+Dec+2715_arcdrift-M16_W_0131.fits :908
+Dec+2715_arcdrift-M17_W_0131.fits :908
+
+
+10911:289
+340 
+361 
+Dec+2715_arcdrift-M16_W_0138.fits :0
+Dec+2715_arcdrift-M17_W_0138.fits :0
+Dec+2715_arcdrift-M19_W_0137.fits :2021
+
+
+6838:290
+364 
+Dec+2715_arcdrift-M16_W_0145.fits :1393
+Dec+2715_arcdrift-M19_W_0145.fits :1393
+
+
+7843:291
+366 
+Dec+2715_arcdrift-M16_W_0159.fits :1229
+Dec+2715_arcdrift-M19_W_0159.fits :1229
+
+
+8975:292
+348 
+372 
+Dec+2715_arcdrift-M16_W_0191.fits :1347
+Dec+2715_arcdrift-M17_W_0191.fits :1347
+Dec+2715_arcdrift-M19_W_0191.fits :1326
+
+
+9839:293
+352 
+Dec+2715_arcdrift-M17_W_0142.fits :983
+Dec+2715_arcdrift-M18_W_0142.fits :983
+
+
+11919:294
+330 
+363 
+Dec+2715_arcdrift-M17_W_0144.fits :1086
+Dec+2715_arcdrift-M16_W_0144.fits :1086
+Dec+2715_arcdrift-M19_W_0144.fits :1086
+
+
+7740:295
+353 
+Dec+2715_arcdrift-M17_W_0150.fits :1413
+Dec+2715_arcdrift-M18_W_0150.fits :1413
+
+
+7752:296
+
+
+13672:297
+324 
+332 
+Dec+2715_arcdrift-M17_W_0160.fits :1843
+Dec+2715_arcdrift-M19_W_0160.fits :1843
+Dec+2715_arcdrift-M16_W_0160.fits :1843
+
+
+10312:298
+367 
+Dec+2715_arcdrift-M17_W_0161.fits :1236
+Dec+2715_arcdrift-M19_W_0161.fits :1236
+
+
+8999:299
+
+
+14178:300
+373 
+Dec+2715_arcdrift-M17_W_0200.fits :1313
+Dec+2715_arcdrift-M19_W_0200.fits :318
+
+
+6974:301
+
+
+11838:302
+
+
+10295:303
+
+
+14534:304
+
+
+11855:305
+
+
+7630:306
+
+
+7415:307
+
+
+9744:308
+341 
+Dec+2715_arcdrift-M18_W_0140.fits :1637
+Dec+2715_arcdrift-M17_W_0140.fits :1637
+
+
+12005:309
+
+
+11029:310
+
+
+11359:311
+
+
+12489:312
+
+
+14289:313
+
+
+7386:314
+
+
+10935:315
+
+
+9789:316
+
+
+6882:317
+
+
+10549:318
+
+
+11012:319
+
+
+10074:320
+
+
+10851:321
+336 
+Dec+2715_arcdrift-M19_W_0124.fits :197
+Dec+2715_arcdrift-M17_W_0124.fits :197
+
+
+14935:322
+
+
+10014:323
+
+
+13672:324
+332 
+Dec+2715_arcdrift-M19_W_0160.fits :1843
+Dec+2715_arcdrift-M16_W_0160.fits :1843
+
+
+11378:325
+334 
+Dec+2715_arcdrift-M19_W_0166.fits :1070
+Dec+2715_arcdrift-M16_W_0166.fits :1070
+
+
+7475:326
+
+
+10958:327
+
+
+12594:328
+
+
+9686:329
+362 
+Dec+2715_arcdrift-M16_W_0139.fits :1650
+Dec+2715_arcdrift-M19_W_0139.fits :1650
+
+
+11919:330
+363 
+Dec+2715_arcdrift-M16_W_0144.fits :1086
+Dec+2715_arcdrift-M19_W_0144.fits :1086
+
+
+9957:331
+
+
+13672:332
+
+
+10675:333
+
+
+11378:334
+
+
+7689:335
+371 
+Dec+2715_arcdrift-M16_W_0190.fits :790
+Dec+2715_arcdrift-M19_W_0190.fits :11
+
+
+10851:336
+
+
+12601:337
+359 
+Dec+2715_arcdrift-M17_W_0126.fits :800
+Dec+2715_arcdrift-M19_W_0126.fits :800
+
+
+10712:338
+
+
+11013:339
+
+
+10911:340
+361 
+Dec+2715_arcdrift-M17_W_0138.fits :0
+Dec+2715_arcdrift-M19_W_0137.fits :2021
+
+
+9744:341
+
+
+13259:342
+365 
+Dec+2715_arcdrift-M17_W_0151.fits :198
+Dec+2715_arcdrift-M19_W_0151.fits :198
+
+
+13445:343
+
+
+15319:344
+
+
+15050:345
+
+
+12149:346
+368 
+Dec+2715_arcdrift-M17_W_0167.fits :1612
+Dec+2715_arcdrift-M19_W_0167.fits :1612
+
+
+9968:347
+358 
+Dec+2715_arcdrift-M17_W_0190.fits :372
+Dec+2715_arcdrift-M18_W_0190.fits :372
+
+
+8975:348
+372 
+Dec+2715_arcdrift-M17_W_0191.fits :1347
+Dec+2715_arcdrift-M19_W_0191.fits :1326
+
+
+10028:349
+
+
+9157:350
+
+
+11131:351
+
+
+9839:352
+
+
+7740:353
+
+
+15082:354
+
+
+9192:355
+
+
+10993:356
+
+
+9099:357
+
+
+9968:358
+
+
+12601:359
+
+
+11800:360
+
+
+10911:361
+
+
+9686:362
+
+
+11919:363
+
+
+6838:364
+
+
+13259:365
+
+
+7843:366
+
+
+10312:367
+
+
+12149:368
+
+
+9465:369
+
+
+9330:370
+
+
+7689:371
+
+
+8975:372
