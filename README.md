@@ -8,13 +8,14 @@ This project is supported by **NKU** and **NAOC**.
 Datasets are supported by **CRAFTS**.
 
 ### Current Status:
-We are trying to use **Gridding data** as neural network's input. And Due to the lack of real datasets, we have to regenerate **virtual signals** to enrich our datasets.
+Since raw datacubes are too big to use our neural network, we decide to use **slide window** and apply neural network in every slice of big datacubes. 
 
 ### About Repository:
 Contain some of my codes using in this project.
 - data: preprocess CRATFS raw data.
     - Generate: generate virtual signals
     - Gridding: regrid raw data
+    - generate_gridding: generate virtual signals and following gridding process.
 
 
 ### About us
