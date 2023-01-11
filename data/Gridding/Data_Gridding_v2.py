@@ -1,18 +1,18 @@
 # %%
 # author:weishirui
-# code version:2022-12-02
+# code version:2023-01-11
 # description: apply Data Gridding to crafts data to cut Datacube for neural network.
 # algorithm: 
 # input:
 # - /home/weishirui/Documents/crafts_data/dataset/source_data/coordinate/:dec & ra & mjd ; 
-# - /home/weishirui/Documents/crafts_data/dataset/source_data/coordinate/beam_dec_ra.csv : CRAFTS's datasets dec & ra map;
-# - /data07/ZD2021_1_2/:mjd & flux 
+# - /home/weishirui/Documents/crafts_data/dataset/source_data/coordinate/beam_dec_ra.csv & beam_file_dec_ra : CRAFTS's datasets dec & ra map;
 # - /home/gaoyunhao/Crafts/: calibration dataset: flux
-# - /home/weishirui/Documents/crafts_data/dataset/source_data/coordinate_flux/Dec+4037_10_05/collection:mjd&flux&dec&ra
+# - /lupengjun/findsource/ : HI sources
 # CyGrid & HCGrid for single channel data gridding;
 # HEGrid for multi-channel data gridding.
 
 # %%
+from genericpath import exists
 from astropy.io import fits
 import numpy as np
 import pandas as pd
@@ -23,30 +23,31 @@ from astropy.wcs import WCS
 import cygrid
 import gc
 import psutil
-import threading
+import argparse
+
+global args
 
 dec_size = 20 # arcmin(full)
 ra_size = 20 # arcmin(full)
-freq_size = 2.5 # MHz, half
+freq_size = 5 # MHz, half
 freq_resolution =  0.00762939 # MHz
 freq_new_resolution = 0.1 # MHz
 
-level_choose = 'D'
+level_choose = 'C'
 
 # %%
 # init all the path using drift_dec_date params:
 def path_init(drift_dec_date):
-    global driftdec,driftdate,crafts_path,coordinate_path,calibration_path
-    global coordinate_flux_path,output_file,output_img_path,origin_path 
+    global driftdec,driftdate,coordinate_path,calibration_path
+    global output_file,output_img_path,origin_path 
     global all_dec_path,HIsource_path,all_file_info_path
+    global Continuous_path
 
     # split name:
     driftdec = drift_dec_date[:14]
     driftdate = drift_dec_date[-8:]
 
     # input path:
-    # crafts origin data:
-    crafts_path = '/data07/ZD2021_1_2/{}/{}/'.format(driftdec,driftdate)
     # crafts all dataset dec information:
     all_dec_path = '/home/weishirui/Documents/crafts_data/dataset/source_data/coordinate/beam_dec_ra.csv'
     # crafts all dataset beams file dec ra information:(now only contains Dec+4037 Dec+4059 Dec+4120)
@@ -54,39 +55,57 @@ def path_init(drift_dec_date):
 
     # coordinate path based on calibration dataset:
     coordinate_path = '/home/weishirui/Documents/crafts_data/dataset/source_data/coordinate/'
-    # coordinate and flux dataset based on calibration dataset:
-    coordinate_flux_path = '/home/weishirui/Documents/crafts_data/dataset/source_data/coordinate_flux/'
     # HI source information:
-    HIsource_path = '/home/weishirui/Documents/crafts_data/dataset/source_data/HIsource_coordinate/crafts_{}_mjd.fits.gz'.format(drift_dec_date)
+    HIsource_path = '/home/lupengjun/findsource/HIsource/crafts_{}_mjd.fits.gz'.format(drift_dec_date)
+    # Continuous source information:
+    Continuous_path = '/home/weishirui/Documents/crafts_data/dataset/source_data/Continuous/{}_ContinuousSpec.fits'.format(drift_dec_date)
     # calibraion dataset: by gaoyunhao
     calibration_path = '/home/gaoyunhao/Crafts/'
 
+    # origin path:
+    origin_path = None
+    
+
     # output path:
     # gridding output path:
-    output_file = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/positive/data/{}'.format(driftdec)
-    # gridding img output path:
-    output_img_path = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/positive/output_img/{}_{}'.format(driftdec,driftdate)
-    # origin path:
-    origin_path =  os.path.join(output_file, 'origin')
+    if args.source == 'v2' or args.source == 'v3':
+        output_file = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/positive/data/{}'.format(driftdec)
+        # gridding img output path:
+        output_img_path = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/positive/output_img/{}_{}'.format(driftdec,driftdate)
     
+        if not os.path.exists(output_file):
+            os.mkdir(output_file)
+        output_file = os.path.join(output_file,level_choose)
+        if not os.path.exists(output_file):
+            os.mkdir(output_file)
 
-    if not os.path.exists(output_file):
-        os.mkdir(output_file)
-    if not os.path.exists(origin_path):
-        os.mkdir(origin_path)
-    output_file = os.path.join(output_file,level_choose)
-    if not os.path.exists(output_file):
-        os.mkdir(output_file)
+        if not os.path.exists(output_img_path):
+            os.mkdir(output_img_path)
+        output_img_path = os.path.join(output_img_path,level_choose)
+        if not os.path.exists(output_img_path):
+            os.mkdir(output_img_path)
 
-    if not os.path.exists(output_img_path):
-        os.mkdir(output_img_path)
-    output_img_path = os.path.join(output_img_path,level_choose)
-    if not os.path.exists(output_img_path):
-        os.mkdir(output_img_path)
+        # origin path:
+        if args.origin:
+            origin_path =  os.path.join(output_file, 'origin')
+            if not os.path.exists(origin_path):
+                os.mkdir(origin_path)
 
-    
-
-    
+    elif args.source == 'continuous':
+        output_file = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/Continuous/data/{}'.format(driftdec)
+        output_img_path = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/Continuous/output_img/{}'.format(drift_dec_date)
+        
+        if not os.path.exists(output_file):
+            os.mkdir(output_file)
+        if not os.path.exists(output_img_path):
+            os.mkdir(output_img_path)
+        
+        # origin path:
+        if args.origin:
+            origin_path =  os.path.join(output_file, 'origin')
+            if not os.path.exists(origin_path):
+                os.mkdir(origin_path)
+        
 # %%
 # Dataset prepare:
 freq_all = np.arange(65536) * 0.00762939 + 1000.00357628
@@ -303,6 +322,7 @@ def get_dataset(source_ra,source_dec,channel):
     # search for decs and beams included:
     df = pd.read_csv(all_dec_path,header=None,sep='\t')
     df.columns = ['drift_dec_date','beam','dec','ra_begin','ra_end']
+
     
     # space expansion in order to avoid blank space:
     ra_space = 1/4*ra_size/60
@@ -348,7 +368,7 @@ def get_dataset(source_ra,source_dec,channel):
     xcoords_l,ycoords_l,flux_l0,flux_l1 = [],[],[],[]
     origin_flux0 = {}
     origin_flux1 = {}
-
+    # print(file_beam)
     for file,beam_n in file_beam.items():
         mjd_index = {}
 
@@ -425,20 +445,22 @@ def get_dataset(source_ra,source_dec,channel):
                         if len(cali_data_t.shape)!=2:
                             print(b_s,len(channel)) 
                         if j==0:
-                            # collect origin dataset:
-                            if '{}_{}'.format(file,beams[b_s]) in origin_flux0.keys():
-                                origin_flux0['{}_{}'.format(file,beams[b_s])] = np.concatenate((origin_flux0['{}_{}'.format(file,beams[b_s])],cali_data_t[mjd_index[fullf],:]),axis=0)
-                            else:
-                                origin_flux0['{}_{}'.format(file,beams[b_s])] = cali_data_t[mjd_index[fullf],:]
+                            if args.origin:
+                                # collect origin dataset:
+                                if '{}_{}'.format(file,beams[b_s]) in origin_flux0.keys():
+                                    origin_flux0['{}_{}'.format(file,beams[b_s])] = np.concatenate((origin_flux0['{}_{}'.format(file,beams[b_s])],cali_data_t[mjd_index[fullf],:]),axis=0)
+                                else:
+                                    origin_flux0['{}_{}'.format(file,beams[b_s])] = cali_data_t[mjd_index[fullf],:]
 
                             flux_l0.extend(cali_data_t)
                         else:
                             flux_l1.extend(cali_data_t)
-                            # collect origin dataset:
-                            if '{}_{}'.format(file,beams[b_s]) in origin_flux1.keys():
-                                origin_flux1['{}_{}'.format(file,beams[b_s])] = np.concatenate((origin_flux1['{}_{}'.format(file,beams[b_s])],cali_data_t[mjd_index[fullf],:]),axis=0)
-                            else:
-                                origin_flux1['{}_{}'.format(file,beams[b_s])] = cali_data_t[mjd_index[fullf],:]
+                            if args.origin:
+                                # collect origin dataset:
+                                if '{}_{}'.format(file,beams[b_s]) in origin_flux1.keys():
+                                    origin_flux1['{}_{}'.format(file,beams[b_s])] = np.concatenate((origin_flux1['{}_{}'.format(file,beams[b_s])],cali_data_t[mjd_index[fullf],:]),axis=0)
+                                else:
+                                    origin_flux1['{}_{}'.format(file,beams[b_s])] = cali_data_t[mjd_index[fullf],:]
 
     if len(flux_l0) == 0:
         print("flux == 0")
@@ -452,8 +474,9 @@ def get_dataset(source_ra,source_dec,channel):
     flux_a = np.concatenate((flux_l0,flux_l1),axis=2) # (:,:,2)
     
     # origin flux data:
-
-    origin_flux_a = get_origin_dataset(origin_flux0,origin_flux1,dec_order)
+    origin_flux_a = None
+    if args.origin:
+        origin_flux_a = get_origin_dataset(origin_flux0,origin_flux1,dec_order)
     
 
     del xcoords_l,ycoords_l,flux_l0,flux_l1,origin_flux0,origin_flux1
@@ -463,7 +486,8 @@ def get_dataset(source_ra,source_dec,channel):
 
 # %%
 # read source file: select some obvious sources to show.(tentative work)
-def source_select():
+# for 2nd datasets
+def source_select_forv2():
     dec_num = {'Dec+4037':0,'Dec-0619':1,'Dec+4059':2,'Dec+4120':3}
     beams = ['M18','M17','M19','M16','M07','M08','M06','M02','M15','M01','M09','M05','M03','M14','M04','M10','M13','M11','M12']
     df = pd.read_excel('/home/lupengjun/findsource/第二批人工.xlsx',sheet_name=dec_num[driftdec.split('_')[0]],engine = 'openpyxl')
@@ -522,6 +546,113 @@ def source_select():
     return source_name,source_dec,source_ra,source_freq,source_mjd
 
 # %%
+# for datasets v3:
+def source_select_forv3():
+    beams = ['M18','M17','M19','M16','M07','M08','M06','M02','M15','M01','M09','M05','M03','M14','M04','M10','M13','M11','M12']
+    df = pd.read_excel('/home/weishirui/Documents/crafts_data/RAtransfer/第三批人工-总.xlsx',sheet_name=driftdec+'_'+driftdate,engine = 'openpyxl')
+    
+    # remove sources which have been generated before.
+    exists_source = os.listdir(output_file)
+    exists_source = [int(s[3:]) for s in exists_source]
+
+    # only select A signal for img:
+    A_sources = list(set(df[df['2D评分']==level_choose]['信号'].tolist()))
+    A_source = []
+    for i in A_sources:
+        if isinstance(i,str) and 'NSA' in i:
+            A_source.append(i[3:]) # ignore NSA
+        else:
+            A_source.append(i)
+    A_source = sorted([int(i) for i in A_source])
+    A_source = np.array(sorted(list(set(A_source)-set(exists_source)))) # remove existing sources.
+    print(A_source)
+    # to-do-list:
+    # use all levels' signals to generate training datasets.
+
+    with fits.open(HIsource_path) as source_hdu:
+        all_source = list(source_hdu[1].data['name'])
+        all_source = np.array([int(i[3:]) for i in all_source]) # skip 'NSA'
+
+    # select A:
+    source_name = []
+    source_dec = []
+    source_ra = []
+    source_mjd = []
+    source_freq = []
+    for s in A_source:
+        if s in all_source:
+            t_index = np.where(np.isin(all_source,s)==True)[0]
+            # more than one beam:
+            # name,ra,dec are same. mjd is different. select the center one.
+            source_name.append(source_hdu[1].data['name'][t_index[0]])
+            if(int(source_hdu[1].data['name'][t_index[0]][3:]) != s):
+                print(s)
+            source_dec.append(source_hdu[1].data['dec'][t_index[0]])
+            source_ra.append(source_hdu[1].data['ra'][t_index[0]])
+            source_freq.append(1420.406/(1+source_hdu[1].data['z'][t_index[0]]))
+
+            if len(t_index)>1:
+                source_beams = source_hdu[1].data['beam'][t_index].tolist()
+                beam_order = [beams.index(i) for i in source_beams] # dec order of beams
+                beams_dict = dict(zip(beam_order,source_beams)) 
+                beams_sort = sorted(beams_dict.items(),key = lambda x:x[0]) # sort by order
+                t_indexx = source_beams.index(beams_sort[len(t_index)//2][1]) # select center beams
+                source_mjd.append(source_hdu[1].data['mjd'][t_index[t_indexx]]) # get the matching mjd
+            else:
+                source_mjd.append(source_hdu[1].data['mjd'][t_index])
+        else:
+            continue
+
+        
+    # release:
+    del df
+    
+    return source_name,source_dec,source_ra,source_freq,source_mjd
+
+# %%
+# select Continuous sources' ra,dec,name,freq(randomly choose)
+def source_select_ContinuousSpec():
+    # read infomation
+    with fits.open(Continuous_path) as source_hdu:
+        s_mjd = list(source_hdu[1].data['mjd'])
+        s_ra = list(source_hdu[1].data['ra(deg)'])
+        s_dec = list(source_hdu[1].data['dec(deg)'])
+        s_name = list(source_hdu[1].data['name'])
+    
+    # get freq:
+    # since Continuous Sources can cover all 50 freq segments
+    # We only use 1300-1420MHz which are in 30-41th segments.
+    # Lists matching freq:
+    freq_all = np.arange(65536) * 0.00762939 + 1000.00357628
+    tr = np.arange(freq_all[0],freq_all[-1],10)
+    Confreq_seg = tr[np.where((tr>1300)&(tr<1420))[0]]
+    s_freq = [(Confreq_seg[f+1]+Confreq_seg[f])/2 for f in range(len(Confreq_seg)-1)] # half of 10MHz
+    
+    # every Continuous Sources will produce 11 files:
+    seg_len = len(s_freq)
+    source_mjd = []
+    source_ra = []
+    source_dec = []
+    source_name = []
+    source_freq = []
+
+    # already exists:
+    exists_source = os.listdir(output_file)
+    exists_source = list(set([str(i.split('_')[1]) for i in exists_source]))
+    
+    for s in range(len(s_mjd)):
+        if str(s_name[s].split('_')[1]) in exists_source:
+            continue 
+        for l in range(seg_len):
+            source_mjd.append(s_mjd[s])
+            source_ra.append(s_ra[s])
+            source_dec.append(s_dec[s])
+            source_name.append(s_name[s]+'_'+str(l)) # add freq segment index as suffix
+            source_freq.append(s_freq[l])
+    
+    return source_name,source_dec,source_ra,source_freq,source_mjd
+
+# %%
 # produce datacube:
 def get_datacube(source_name):
     gridding_data = []
@@ -574,7 +705,13 @@ def source_datacube(drift_dec_date):
     path_init(drift_dec_date)
 
     # select source:
-    source_name,source_dec,source_ra,source_freq,_ = source_select()
+    source_name,source_dec,source_ra,source_freq = None,None,None,None
+    if args.source == 'v2':
+        source_name,source_dec,source_ra,source_freq,_ = source_select_forv2()
+    elif args.source == 'v3':
+        source_name,source_dec,source_ra,source_freq,_ = source_select_forv3()
+    elif args.source == 'continuous':
+        source_name,source_dec,source_ra,source_freq,_ = source_select_ContinuousSpec()
 
     # gridding
     for s_idx in range(len(source_dec)):
@@ -583,6 +720,10 @@ def source_datacube(drift_dec_date):
 
         freq_cs = source_freq[s_idx]
         channel_list = np.where((freq_all>freq_cs-freq_size)&(freq_all<freq_cs+freq_size))[0]
+        # left:
+        # channel_list = np.where((freq_all<=freq_cs-freq_size)&(freq_all>=freq_cs-2*freq_size))[0]
+        # right:
+        # channel_list = np.where((freq_all<=freq_cs+2*freq_size)&(freq_all>=freq_cs+freq_size))[0]
         # channel_list = [channel_list[len(channel_list)//2]]
 
         if len(channel_list)==0:
@@ -595,11 +736,13 @@ def source_datacube(drift_dec_date):
         if not type(xcoords_a) is np.ndarray:
             continue
         
-        prim = fits.PrimaryHDU()
-        hdul = fits.HDUList([prim])
-        hduu = fits.ImageHDU(data=origin_flux_a)
-        hdul.append(hduu)
-        hdul.writeto(os.path.join(origin_path,'{}_origin.fits'.format(source_name[s_idx])),overwrite=True)
+        # origin datacube write to fits:
+        if args.origin and origin_flux_a!=None:
+            prim = fits.PrimaryHDU()
+            hdul = fits.HDUList([prim])
+            hduu = fits.ImageHDU(data=origin_flux_a)
+            hdul.append(hduu)
+            hdul.writeto(os.path.join(origin_path,'{}_origin.fits'.format(source_name[s_idx])),overwrite=True)
         
         if not os.path.exists(os.path.join(output_img_path,source_name[s_idx])):
             os.mkdir(os.path.join(output_img_path,source_name[s_idx]))
@@ -682,52 +825,13 @@ def source_datacube(drift_dec_date):
             # produce datacube:
             get_datacube(source_name[s_idx])
 
-        
-
-# compress frequency:
-def transfer_freq(data):
-    # data.shape = (channel,dec,ra)
-    times = int(freq_new_resolution/freq_resolution)
-    # only compress not interpolation
-    if times<1:
-        print("Can't Compress! Please adjust your resolution.")
-        return 
-
-    # regrid function
-    # average to new resolution:
-    length = data.shape[0]
-    frequency_left = len([j for j in range(length//2+times//2-1,0,int(-1*times))])-1
-    frequency_right = len([j for j in range(length//2+times//2,length,times)])-1
-    m_data = np.zeros((frequency_left+frequency_right,data.shape[1],data.shape[2]))
-    left_data = []
-    right_data = [] 
-    
-    # average operation from center to avoid source offset.
-    for d in range(data.shape[1]):
-        for r in range(data.shape[2]):
-            # left:
-            left_index = [j for j in range(length//2+times//2-1,0,int(-1*times))]
-            left_index.reverse()
-            left_indexx = []
-            for j in range(len(left_index)-1):
-                left_indexx.append([x for x in range(left_index[j],left_index[j+1])])
-            left_data = data[left_indexx,d,r]
-            left_data = np.mean(left_data,axis=1)
-        
-            # right:
-            right_index = [j for j in range(length//2+times//2,length,times)]
-            right_indexx = []
-            for j in range(len(right_index)-1):
-                right_indexx.append([x for x in range(right_index[j],right_index[j+1])])
-            right_data = data[right_indexx,d,r]
-            right_data = np.mean(right_data,axis=1)
-            
-            m_data[:frequency_left,d,r] = left_data.copy()
-            m_data[frequency_left:,d,r] = right_data.copy()
-
-    return m_data
-
-
 # %%
 if __name__ == '__main__':
-    source_datacube('Dec+4120_10_05_20210929')
+    # add args module to control all parameters.
+    parser = argparse.ArgumentParser(description='Data-Gridding')
+
+    parser.add_argument("--source",type=str,required=True,help="sources to gridding") # ['v2','v3','continuous']
+    parser.add_argument("--origin",action='store_true',default=False,help="produce origin datasets") 
+    args = parser.parse_args()
+
+    source_datacube('Dec+4037_10_05_20211001')

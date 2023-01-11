@@ -1,5 +1,5 @@
 # author:weishirui
-# code version:2022-11-30
+# code version:2023-01-08
 # description: apply Data Gridding to crafts data to cut specific negative Datacube for neural network.
 # algorithm: 
 # input:
@@ -33,11 +33,11 @@ import psutil
 
 dec_size = 20 # arcmin(full)
 ra_size = 20 # arcmin(full)
-freq_size = 2.5 # MHz, half
+freq_size = 5 # MHz, half
 freq_resolution =  0.00762939 # MHz
 freq_new_resolution = 0.1 # MHz
 
-batch_idx = 3 # produce number
+batch_idx = 1 # produce number
 
 # %%
 # init all the path using drift_dec_date params:
@@ -68,9 +68,9 @@ def path_init(drift_dec_date):
 
     # output path:
     # gridding output path:
-    output_file = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/negative/data/{}'.format(driftdec)
+    output_file = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/negative/data/{}_10MHz'.format(driftdec)
     # gridding img output path:
-    output_img_path = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/negative/output_img/{}_{}'.format(driftdec,driftdate)
+    output_img_path = '/home/weishirui/Documents/crafts_data/dataset/RAtransfer_dataset/gridding/negative/output_img/{}_{}_10MHz'.format(driftdec,driftdate)
 
     if not os.path.exists(output_file):
         os.mkdir(output_file)
