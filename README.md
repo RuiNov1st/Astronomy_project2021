@@ -13,9 +13,9 @@ Since raw datacubes are too big to use our neural network, we decide to use **sl
 ### About Repository:
 Contain some of my codes using in this project.
 - data: preprocess CRATFS raw data.
-    - Generate: generate virtual signals
-    - Gridding: regrid raw data
-    - generate_gridding: generate virtual signals and following gridding process.
+    - generate: generate virtual signals
+    - gridding: regrid raw data
+    - tools: scripts to process raw data 
 
 
 ### About us
