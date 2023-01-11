@@ -1,5 +1,5 @@
 # author:weishirui
-# code version:2022-12-22
+# code version:2022-12-23
 # description: generate virtual signal for following data gridding process.
 # algorithm: 
 # generate virtual signals with signal's pixel coordinate. (signal generate data)
@@ -167,7 +167,8 @@ def generate_signal_pro(signal_opt,index,center,beamnum,miss,u_hdu,c_hdu,b_hdu):
             info = u_hdu[index].header
             # freq cut: default = center+-100
             f_begin,f_end = length//2-100,length//2+100
-            fr_begin = random.randint(0,length-200-1)
+            # fr_begin = random.randint(0,length-200-1)
+            fr_begin = random.randint(65,721-200-1) # since I have to choose 5MHz data, so the edges should be careful. 
             location_info[0][1] = fr_begin+100 
             for i in range(width):
                 rect_data[i,fr_begin:fr_begin+200,:] = smooth_data[f_begin:f_end,:]
@@ -389,4 +390,4 @@ def assign_coordinate(virtual_data_savepath,savepath):
     hdul.writeto(savepath)
 
 
-assign_coordinate('/home/weishirui/Documents/crafts_data/dataset/Virtual_data/CRAFTS_version2_cali_2022-12-22-12-38.fits','/home/weishirui/Documents/crafts_data/dataset/Virtual_data/CRAFTS_version2_cali_2022-12-22-12-38_cf.fits')
+assign_coordinate('/home/weishirui/Documents/crafts_data/dataset/Virtual_data/CRAFTS_version2_cali_2022-12-24-20-32.fits','/home/weishirui/Documents/crafts_data/dataset/Virtual_data/CRAFTS_version2_cali_2022-12-24-20-32_cf.fits')

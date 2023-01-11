@@ -1,6 +1,6 @@
 # %%
 # author:weishirui
-# code version:2022-12-21
+# code version:2022-12-23
 # description: apply Data Gridding to virtual data to cut Datacube for neural network.
 # algorithm: 
 # input:
@@ -20,7 +20,6 @@ from astropy.wcs import WCS
 import cygrid
 import gc
 import psutil
-import threading
 
 dec_size = 20 # arcmin(full)
 ra_size = 20 # arcmin(full)
@@ -310,13 +309,17 @@ def source_datacube(virtual_name):
 
         if not os.path.exists(os.path.join(output_img_path,source_name)):
             os.mkdir(os.path.join(output_img_path,source_name))
+        
+        # don't produce the same data
+        if os.path.exists(os.path.join(os.path.join(output_file,source_name),source_name+'.fits')):
+            continue
     
         p_flag = False
 
         for p in range(2): # polar
             prim = fits.PrimaryHDU()
             hdul = fits.HDUList([prim])
-
+    
             # iterate channel:
             for c_idx in range(flux_data.shape[2]):
                 flux = flux_data[:,:,c_idx,p]
@@ -349,11 +352,7 @@ def source_datacube(virtual_name):
 
                 if not os.path.exists(os.path.join(output_file,source_name)):
                     os.mkdir(os.path.join(output_file,source_name))
-                else:
-                    # don't regenerate the same data.
-                    if len(os.listdir(os.path.join(output_file,source_name)))!=0:
-                        p_flag = True
-                        break 
+                
                 # save fits
                 hduu = fits.ImageHDU(data=cygrid_map)
                 hduu.header['index'] = c_idx
@@ -447,4 +446,4 @@ def transfer_freq(data):
 
 # %%
 if __name__ == '__main__':
-    source_datacube('CRAFTS_version2_cali_2022-12-22-12-38_cf.fits')
+    source_datacube('CRAFTS_version2_cali_2022-12-24-20-32_cf.fits')
